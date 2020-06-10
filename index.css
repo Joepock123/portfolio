@@ -1,9 +1,20 @@
 * {
     box-sizing: border-box;
+    font-size: 100%;
+}
+
+:root {
+    --green: #164D59;
+    --yellow: #F2D377;
+    --lightBrown: #F2994B;
+    --orange: #F26513;
+    --primary: #A6351C;
+    --secondary: #1c1b20;
+    --bg: #f8f8f8;
 }
 
 body {
-    max-width: 80vw;
+    max-width: 95vw;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -12,6 +23,26 @@ a {
     color: inherit;
     text-decoration: none;
     font-size: inherit;
+}
+
+.nav__header {
+    display: flex;
+    align-items: center;
+    height: 5vh;
+
+}
+
+.hero__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  linear-gradient(90deg, var(--bg) 50%, var(--primary) 50%); 
+    height: 80vh;
+}
+
+.hero__h1 {
+    font-size: 5rem;
+    font-weight: bold;
 }
 
 .svg-icon {
@@ -36,9 +67,9 @@ a {
    transition: fill .3s;
 }
 
-header, footer {
-    background-color: hsl(0, 0%, 10%);
-    color: white;
+footer {
+    background-color: transparent;
+    color: black;
     padding: 1rem;
     font-size: 1.5rem;
 }
