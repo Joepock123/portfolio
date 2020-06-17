@@ -11,6 +11,7 @@
     --primary: #A6351C;
     --secondary: #1c1b20;
     --bg: #f8f8f8;
+    --animation-props: all 1s 1.5s;
 }
 
 body {
@@ -34,15 +35,49 @@ a {
 
 .hero__section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background:  linear-gradient(90deg, var(--bg) 50%, var(--primary) 50%); 
+    /* justify-content: center;
+    align-items: center; */
+    /* background:  linear-gradient(90deg, var(--bg) 70%, var(--primary) 70%);  */
     height: 80vh;
+    background-image: url(./img/hero-1.JPG);
+    background-size: contain;
+    background-position: right;
+    transition: var(--animation-props);
+}
+
+.hero__section--loaded {
+    filter: grayscale(90%);
+}
+
+.hero__div-content {
+    background: var(--bg);
+    width: 35%;
+    transition: var(--animation-props);
+}
+
+.hero__div-image {    
+    width: 65%;
+    transition: var(--animation-props);
+}
+
+.hero__div-content--loaded {
+    width: 65%;
+}
+
+.hero__div-image--loaded {
+    width: 35%;
 }
 
 .hero__h1 {
-    font-size: 5rem;
+    display: none;
+    font-size: 3rem;
     font-weight: bold;
+    transition: all ease 10s;
+}
+
+.hero__h1--loaded {
+    display: block;
+    color: var(--primary);
 }
 
 .svg-icon {
