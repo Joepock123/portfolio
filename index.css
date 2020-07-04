@@ -26,6 +26,11 @@ a {
     font-size: inherit;
 }
 
+span {
+    padding-left: 5px;
+    background: pink;
+}
+
 .nav__header {
     display: flex;
     align-items: center;
