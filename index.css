@@ -27,6 +27,11 @@ a {
     font-size: inherit;    
 }
 
+img:hover {
+    /* border: var(--primary); */
+    background: var(--primary);
+}
+
 
 
 header, footer {
@@ -83,6 +88,24 @@ footer {
     filter: grayscale(90%);
 }
 
+@media only screen and (max-width: 600px) {
+    .hero__section {
+        /* flex-direction: column; */
+    }
+
+    .hero__div-content {
+        width: 80%;
+        /* background: #A6351C; */
+        /* height: 50%; */
+    }
+    
+    .hero__div-image {
+        width: 20%;
+        background: #A6351C;
+        /* height: 50%; */
+    }
+}
+
 
 
 
@@ -111,4 +134,8 @@ footer {
     */
    transition: fill .3s;
    z-index: 1000;
+}
+
+.svg-icon:hover {
+    color: var(--primary);
 }
