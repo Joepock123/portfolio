@@ -18,72 +18,77 @@ body {
     max-width: 95vw;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 a {
     color: inherit;
     text-decoration: none;
-    font-size: inherit;
+    font-size: inherit;    
 }
 
-span {
-    padding-left: 5px;
-    background: pink;
-}
 
-.nav__header {
+
+header, footer {
     display: flex;
-    align-items: center;
-    height: 5vh;
+    align-items: center;    
+    font-size: 1.5rem;
 
+}
+
+footer {
+    padding: 0.5rem;
+    justify-content: space-between;
 }
 
 .hero__section {
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    /* background:  linear-gradient(90deg, var(--bg) 70%, var(--primary) 70%);  */
     height: 80vh;
-    background-image: url(./img/hero-1.JPG);
-    background-size: contain;
-    background-position: right;
-    transition: var(--animation-props);
-}
-
-.hero__section--loaded {
-    filter: grayscale(90%);
 }
 
 .hero__div-content {
     background: var(--bg);
-    width: 35%;
+    width: 50%;
+    padding: 1rem;
     transition: var(--animation-props);
 }
 
-.hero__div-image {    
-    width: 65%;
+.hero__div-content > h1 {
+    font-size: 1rem;
+}
+
+.hero__div-image {
+    background-image: url(./img/hero-1.JPG);
+    background-size: cover;
+    background-position: right;    
+    width: 50%;
     transition: var(--animation-props);
 }
 
-.hero__div-content--loaded {
-    width: 65%;
+.hero__div-image:hover {
+    filter: grayscale(0%);
+    transition: all 1s;
+}
+
+.hero__h1--1, .hero__h1--2, .hero__h1--3, .hero__h1--4, .hero__h1--9 {
+    padding-left: 1rem;    
+} 
+
+.hero__h1--5, .hero__h1--6, .hero__h1--7, .hero__h1--8 {
+    padding-left: 2rem;
+    color: var(--primary)
 }
 
 .hero__div-image--loaded {
-    width: 35%;
+    filter: grayscale(90%);
 }
 
-.hero__h1 {
-    display: none;
-    font-size: 3rem;
-    font-weight: bold;
-    transition: all ease 10s;
-}
 
-.hero__h1--loaded {
-    display: block;
-    color: var(--primary);
-}
+
+
+
+
+
 
 .svg-icon {
     /* Place the icon on the text baseline. */
@@ -105,17 +110,5 @@ span {
      * we can also use a transition on the fill value.
     */
    transition: fill .3s;
-}
-
-footer {
-    background-color: transparent;
-    color: black;
-    padding: 1rem;
-    font-size: 1.5rem;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+   z-index: 1000;
 }

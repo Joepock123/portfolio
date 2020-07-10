@@ -1,16 +1,18 @@
 const heroContentSection = document.querySelector(".hero__section");
 const heroContentDiv = document.querySelector(".hero__div-content");
 const heroImageDiv = document.querySelector(".hero__div-image");
-const heroH1Text = document.querySelector(".hero__h1-1");
-const heroH2Text = document.querySelector(".hero__h1-2");
-const heroH3Text = document.querySelector(".hero__h1-3");
-const heroH4Text = document.querySelector(".hero__h1-4");
-
 
 const heroDetailsArr = [
   "{",
-  "name: Joe Jackson",
-  "jobTitle: Full Stack Developer",
+  '"name": "Joe Jackson",',
+  '"jobTitle": "Full Stack Developer",',
+  '"language": "JavaScript",',
+  '"mainStack": [',
+  '"React",',
+  '"Express",',
+  '"PostgreSQL",',
+  '"Node.js"',
+  ']',
   "}",
 ];
 
@@ -20,9 +22,9 @@ function betterCallback(arr, index) {
   const currentElement = arr[index];
 
   const newHeadingElement = document.createElement("H1");
-  newHeadingElement.classList.add(`heading-line-${index}`);
+  newHeadingElement.classList.add(`hero__h1--${index}`);
   heroContentDiv.appendChild(newHeadingElement);
-  const headingDomElement = document.querySelector(`.heading-line-${index}`);
+  const headingDomElement = document.querySelector(`.hero__h1--${index}`);
 
   let j = 0;
   const elementLength = currentElement.length;
@@ -32,7 +34,7 @@ function betterCallback(arr, index) {
       j++;
       setTimeout(() => {
         typer();
-      }, 50);
+      }, 40);
     } else {
       betterCallback(arr, newIndex);
     }
@@ -50,31 +52,3 @@ setTimeout(() => {
 setTimeout(() => {
   betterCallback(heroDetailsArr, 0);
 }, 3000);
-
-// This function uses text content
-// The problem is not sure how to add nbs with this for object formatting
-// function betterCallback(arr, index) {
-//   if (index >= arr.length) return;
-//   const newIndex = index + 1;
-//   const currentElement = arr[index];
-
-//   const newHeadingElement = document.createElement("H1");
-//   newHeadingElement.classList.add(`heading-line-${index}`);
-//   heroContentDiv.appendChild(newHeadingElement);
-//   const headingDomElement = document.querySelector(`.heading-line-${index}`);
-
-//   let j = 0;
-//   const elementLength = currentElement.length;
-//   function typer() {
-//     if (j < elementLength) {
-//       headingDomElement.textContent += currentElement[j];
-//       j++;
-//       setTimeout(() => {
-//         typer();
-//       }, 50);
-//     } else {
-//       betterCallback(arr, newIndex);
-//     }
-//   }
-//   typer();
-// }
