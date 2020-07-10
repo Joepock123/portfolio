@@ -28,7 +28,6 @@ a {
 }
 
 img:hover {
-    /* border: var(--primary); */
     background: var(--primary);
 }
 
@@ -101,7 +100,7 @@ footer {
     
     .hero__div-image {
         width: 20%;
-        background: #A6351C;
+        background:var(--primary);
         /* height: 50%; */
     }
 }

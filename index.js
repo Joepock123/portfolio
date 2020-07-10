@@ -43,10 +43,7 @@ function betterCallback(arr, index) {
 }
 
 setTimeout(() => {
-  console.log("Settimeout called");
-  heroContentDiv.classList.add("hero__div-content--loaded");
   heroImageDiv.classList.add("hero__div-image--loaded");
-  heroContentSection.classList.add("hero__section--loaded");
 }, 1000);
 
 setTimeout(() => {
