@@ -24,6 +24,10 @@ a {
     font-size: inherit;    
 }
 
+a:hover {
+    color: var(--primary);
+}
+
 header, footer {
     display: flex;
     align-items: center;    
@@ -42,14 +46,31 @@ footer {
     grid-template-rows: 80vh;
 }
 
-.hero__div-content {
+.hero__div-container {
     background: var(--bg);
-    padding: 1rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero__div-content {    
+    /* align-self: center; */
 }
 
 .hero__div-content > h1 {
     font-size: 1rem;
 }
+
+.hero__div-icon {    
+    align-self: center;
+}
+
+.hero__div-icon > a {
+    font-size: 3rem;
+}
+
+
 
 .hero__div-image {
     background-image: url(./img/hero-1.JPG);
@@ -64,7 +85,7 @@ footer {
 }
 
 .hero__h1--1, .hero__h1--2, .hero__h1--3, .hero__h1--4, .hero__h1--9 {
-    padding-left: 1rem;    
+    padding-left: 1rem;
 } 
 
 .hero__h1--5, .hero__h1--6, .hero__h1--7, .hero__h1--8 {
