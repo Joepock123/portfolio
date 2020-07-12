@@ -8,7 +8,6 @@
     --primary: #A6351C;
     --secondary: #1c1b20;
     --bg: #f8f8f8;
-    /* --animation-props: opacity 1s 1.5s; */
 }
 
 body {
@@ -36,14 +35,18 @@ header, footer {
 }
 
 footer {
-    padding: 0.5rem;
-    justify-content: space-between;
+    padding: 0.5rem 0;
+    justify-content: flex-end;
+}
+
+footer > a {
+    padding-left: 0.5rem;
 }
 
 .hero__section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 80vh;
+    grid-template-rows: 90vh;
 }
 
 .hero__div-container {
@@ -54,10 +57,6 @@ footer {
     justify-content: space-between;
 }
 
-.hero__div-content {    
-    /* align-self: center; */
-}
-
 .hero__div-content > h1 {
     font-size: 1rem;
 }
@@ -66,11 +65,10 @@ footer {
     align-self: center;
 }
 
-.hero__div-icon > a {
-    font-size: 3rem;
+.hero__div-icon {
+    font-size: 2rem;
+    animation: bouncing 0.7s 10s infinite alternate;
 }
-
-
 
 .hero__div-image {
     background-image: url(./img/hero-1.JPG);
@@ -97,33 +95,10 @@ footer {
     filter: grayscale(90%);
 }
 
-@media only screen and (max-width: 600px) {
-    .hero__div-content {
-        /* width: 80%; */
-    }
-    
-    .hero__div-image {
-        /* width: 20%; */
-        background:var(--primary);
-    }
-
-    .hero__div-image {
-        /* width: 20%; */
-        background:var(--primary);
-    }
-}
-
-
-
-
-
-
-
-
 .svg-icon {
     /* Place the icon on the text baseline. */
     position: relative;
-    top: .125em;
+    top: .125em;    
 
     /* Prevent the icon from shrinking inside a flex container. */
     flex-shrink: 0;
@@ -145,4 +120,33 @@ footer {
 
 .svg-icon:hover {
     color: var(--primary);
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 600px) {
+    .hero__section {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .hero__div-container {
+        grid-column: 1 / 5;
+    }
+    
+    .hero__div-image {
+        grid-column: 5 / 6;
+        background:var(--primary);
+    }
+
+}
+
+
+
+/* ANIMATIONS */
+
+@keyframes bouncing {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
 }
