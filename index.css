@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -29,24 +30,33 @@ a:hover {
 
 header, footer {
     display: flex;
+    justify-content: space-between;
     align-items: center;    
-    font-size: 1.5rem;
+}
 
+header {
+    font-size: 1.5rem;
 }
 
 footer {
+    margin-top: 15rem;
     padding: 0.5rem 0;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
-footer > a {
+.nav__header__link--home {
+    display: block;
+    margin-right: auto;
+}
+
+header > a {
     padding-left: 0.5rem;
 }
 
 .hero__section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 90vh;
+    grid-template-rows: 85vh;
 }
 
 .hero__div-container {
@@ -94,6 +104,47 @@ footer > a {
 .hero__div-image--loaded {
     filter: grayscale(90%);
 }
+
+
+
+
+/* CONTENT SECTION */
+.content__section {    
+    margin-top: 100px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+    grid-auto-rows: 400px;
+}
+
+.content__article {
+    background: var(--bg);
+    display: flex;
+    padding: 1rem;
+}
+
+.content__article__div-img {    
+    background-size: cover;
+    background-position: left top;
+    width: 50%;
+}
+
+.img-1 {
+    background-image: url(./img/humanibase.PNG);
+}
+
+.img-2 {
+    background-image: url(./img/whippy.PNG);
+}
+
+.content__article__div-content {
+    /* background: orange; */
+    padding: 1rem;
+    width: 50%;
+}
+
+
+
 
 .svg-icon {
     /* Place the icon on the text baseline. */
