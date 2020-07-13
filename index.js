@@ -13,11 +13,7 @@ const heroDetailsArr = [
   '"PostgreSQL",',
   '"Node.js"',
   '],',
-  '"interests": [',
-  '"GraphQL",',
-  '"TypeScript",',
-  '"Gatsby"',
-  '],',
+  '"interests": "GraphQL & TypeScript"',
   "}",
 ];
 
