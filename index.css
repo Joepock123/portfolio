@@ -109,11 +109,11 @@ header > a {
     transition: all 0.5s;
 }
 
-.hero__h1--1, .hero__h1--2, .hero__h1--3, .hero__h1--4, .hero__h1--9 {
+.hero__h1--1, .hero__h1--2, .hero__h1--3, .hero__h1--4, .hero__h1--9, .hero__h1--10, .hero__h1--14 {
     padding-left: 1rem;
 } 
 
-.hero__h1--5, .hero__h1--6, .hero__h1--7, .hero__h1--8 {
+.hero__h1--5, .hero__h1--6, .hero__h1--7, .hero__h1--8, .hero__h1--11, .hero__h1--12, .hero__h1--13 {
     padding-left: 2rem;
     color: var(--primary)
 }
