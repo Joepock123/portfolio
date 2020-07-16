@@ -109,6 +109,10 @@ header > a {
     transition: all 0.5s;
 }
 
+
+
+/* Styles for typed text */
+
 .hero__h1--1, .hero__h1--2, .hero__h1--3, .hero__h1--4, .hero__h1--9, .hero__h1--10 {
     padding-left: 1rem;
 } 
@@ -192,10 +196,23 @@ header > a {
     margin: 0 0 0.5rem 0;
 }
 
-.content__article__div-img {    
+.content__article__div-img {
+    display: relative;
     background-size: cover;
     background-position: left top;
     width: 50%;
+    transition: all 0.5s;
+}
+
+.content__article__div-img:hover {
+    filter: grayscale(100%);
+    border: solid 1px pink;
+}
+
+.content__article__div-img-link {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .img-1 {
